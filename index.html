@@ -104,7 +104,7 @@ sup{
       <li><a id="about">About Me</a></li>
       <li><a id="skills">Skills</a></li>
       <li><a href="Resume1.pdf" download="Resume1.pdf">Resume</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a id="contact">Contact</a></li>
     </ul>
   </nav>
 
@@ -131,6 +131,30 @@ sup{
     <li>Data Structure And Algorithm</li>
     <li>Design and Analysis of Algorithms</li>
   </div>
+  <div id="contactcon">
+    <table>
+      <tr>
+      <th>NAME:</th>
+      <td>Lakshay kalra</td>
+      </tr>
+      <tr>
+      <th>MOBILE NUMBER:</th>
+      <td>8824483127</td>
+      </tr>
+      <tr>
+        <th>PINCODE:</th>
+        <td>335001</td>
+        </tr>
+      <tr>
+      <th>EMAIL:</th>
+      <td>laskhaykalra28@gmail.com</td>
+      </tr>
+      <tr>
+        <th>GITHUB ID:</th>
+        <td>mrkalra07</td>
+        </tr> 
+      </table>
+  </div>
 
 
   <footer>
@@ -142,15 +166,20 @@ sup{
     let x=document.getElementById('about');
     let z=document.getElementById('abcon');
     let s=document.getElementById('skills');
-    let sc=document.getElementById('skillcon')
+    let sc=document.getElementById('skillcon');
+    let c=document.getElementById('contact');
+    let cc=document.getElementById('contactcon')
+
     z.style.display="none";
     sc.style.display="none";
+    cc.style.display="none";
   x.addEventListener('click',()=> 
   {
     let y=document.getElementById('content');
     y.style.display="none";
     z.style.display="block";
     sc.style.display="none";
+    cc.style.display="none";
   })
   s.addEventListener('click',()=> 
   {
@@ -158,6 +187,16 @@ sup{
     y.style.display="none";
     sc.style.display="block";
     z.style.display="none";
+    cc.style.display="none";
+  })
+  c.addEventListener('click',()=> 
+  {
+    let y=document.getElementById('content');
+    y.style.display="none";
+    cc.style.display="block";
+    z.style.display="none";
+    sc.style.display="none";
+
   })
   
 
