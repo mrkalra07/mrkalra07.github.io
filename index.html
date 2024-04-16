@@ -95,17 +95,8 @@
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 2rem;
-      animation: rotate 5s linear infinite;
     }
 
-    @keyframes rotate {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }
 
     .skills-section {
       padding: 5rem 0;
@@ -191,9 +182,9 @@
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About Me</a></li>
-      <li>>Skills</a></li>
-      <li><a href="game.html">Projects</a></li>
-      <li><a href="Resume.pdf">Resume</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="game.html" target="_blank">Projects</a></li>
+      <li><a href="Resume.pdf" download="Resume">Resume</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -204,6 +195,24 @@
     <p>
       Explore my skills, projects, and achievements. Feel free to get in touch!
     </p>
+  </section>
+  <section id="about" style="background-color: #f5f5f5; padding: 5rem 0; display: flex; flex-direction: column; align-items: center;">
+    <div style="background-color: #fff; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); max-width: 80rem;">
+      <h2 style="margin-bottom: 1rem;">About Me</h2>
+      <div style="display: flex; align-items: center; margin-bottom: 2rem;">
+        <img src="PIC.jpg" alt="Profile Pic" class="profile-pic" />
+        <div style="margin-left: 2rem;">
+          <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">Hi there, I'm Lakshay Kalra, a</p>
+          <p style="font-size: 1.2rem; font-weight: bold;">passionate and dedicated computer science enthusiast.</p>
+        </div>
+      </div>
+      <p style="font-size: 1.2rem; max-width: 50rem; text-align: justify;">
+        I'm currently pursuing a Bachelor's degree in Computer Science at VIT Vellore, where I've honed my skills in various programming languages, algorithms, and software engineering principles. With a love for problem-solving and a relentless pursuit of knowledge, I strive to make a positive impact through my skills in software development.
+      </p>
+      <p style="font-size: 1.2rem; max-width: 50rem; text-align: justify;">
+        I believe in the power of technology to transform lives and industries, and I'm always looking for new opportunities and challenges to explore. Feel free to get in touch with me to learn more about my professional journey, skills, and projects. I value networking and believe in the collaborative spirit of the tech community.
+      </p>
+    </div>
   </section>
 
   <section class="skills-section" id="skills">
@@ -248,4 +257,51 @@
     &copy; 2024 Lakshay. All rights reserved.
   </footer>
 
-  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      let x = document.getElementById('about');
+      let z = document.getElementById('abcon');
+      let s = document.getElementById('skills');
+      let sc = document.getElementById('skillcon');
+      let c = document.getElementById('contact');
+      let cc = document.getElementById('contactcon');
+
+      // Hide elements initially
+      if (z) z.style.display = "none";
+      if (sc) sc.style.display = "none";
+      if (cc) cc.style.display = "none";
+
+      // Add event listeners
+      if (x) {
+        x.addEventListener('click', function() {
+          let y = document.getElementById('content');
+          if (y) y.style.display = "none";
+          if (z) z.style.display = "block";
+          if (sc) sc.style.display = "none";
+          if (cc) cc.style.display = "none";
+        });
+      }
+      if (s) {
+        s.addEventListener('click', function() {
+          let y = document.getElementById('content');
+          if (y) y.style.display = "none";
+          if (sc) sc.style.display = "block";
+          if (z) z.style.display = "none";
+          if (cc) cc.style.display = "none";
+        });
+      }
+      if (c) {
+        c.addEventListener('click', function() {
+          let y = document.getElementById('content');
+          if (y) y.style.display = "none";
+          if (cc) cc.style.display = "block";
+          if (z) z.style.display = "none";
+          if (sc) sc.style.display = "none";
+        });
+      }
+    });
+  </script>
+
+ 
+</body>
+</html>
