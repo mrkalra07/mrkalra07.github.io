@@ -105,21 +105,28 @@
         var score = 0;
         var cross = true;
 
-        var audio = new Audio('music.mp3');
-var audiogo = new Audio('gameover.mp3');
+       var audio = new Audio('');
+        var audiogo = new Audio('gameover.mp3');
 
+        function stopMusic() {
+            audio.pause();
+        }
 
-        
         audio.addEventListener('canplay', function() {
             setTimeout(function() {
                 audio.play();
             }, 1000);
         });
+
         audiogo.addEventListener('canplay', function() {
             setTimeout(function() {
                 audiogo.pause();
-                audio.pause();
+                stopMusic(); 
             }, 1000);
+        });
+
+        window.addEventListener('beforeunload', function(event) {
+            stopMusic(); 
         });
 
         document.onkeydown = function (e) {
