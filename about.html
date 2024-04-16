@@ -1,54 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>About me</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lakshay's Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #ff9966, #ff5e62);
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    nav {
+      background-color: rgba(51, 51, 51, 0.8);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      z-index: 100;
+      animation: slideDown 1s ease-out forwards;
+    }
+
+    @keyframes slideDown {
+      0% {
+        transform: translateY(-100%);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    nav ul {
+      display: flex;
+    }
+
+    nav li {
+      margin: 0 1rem;
+    }
+
+    .welcome-section {
+      padding: 10rem 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      animation: fadeIn 1s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .welcome-section h1 {
+      color: #fff;
+      font-size: 4rem;
+      margin-bottom: 2rem;
+    }
+
+    .welcome-section p {
+      color: #fff;
+      font-size: 1.5rem;
+      width: 50%;
+      margin-bottom: 4rem;
+    }
+
+    .profile-pic {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 2rem;
+  
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .skills-section {
+      padding: 5rem 0;
+      background-color: #fff;
+      color: #333;
+      animation: slideUp 1s ease-out forwards;
+    }
+
+    @keyframes slideUp {
+      0% {
+        transform: translateY(100%);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    .skills-section h2 {
+      font-size: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .skills-section ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .skills-section li {
+      width: 30%;
+      margin-bottom: 2rem;
+    }
+
+    .contact-section{
+      padding: 5rem 0;
+      background-color: #333;
+      color: #fff;
+      animation: slideUp 1s ease-out forwards;
+    }
+
+    .contact-section h2 {
+      font-size: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .contact-section table {
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    .contact-section th,
+    .contact-section td {
+      padding: 1rem;
+      border-bottom: 1px solid #fff;
+    }
+
+    footer {
+      padding: 2rem 0;
+      background-color: rgba(51, 51, 51, 0.8);
+      color: #fff;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      animation: slideUp 1s ease-out forwards;
+    }
+
+    @keyframes slideUp {
+      0% {
+        transform: translateY(100%);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
-<style>
- sup{
-    color: aliceblue;
-    text-align: left;
-    font-size:13px;
-    display: block;
-    margin-top: 20px;
-    margin-left: 20px;
-    
- }
- body{
-    background-color:black;
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    padding: 10px;
- }
- a{
-    color:bisque;
- }
- img {
-            width: 200px;
-            height: 200px;
-            border-radius: 80%;
-            margin-top: 10px;
-            position: fixed; 
-            top: 2px;
-            right: 20px;
-        }
-</style>
 <body>
-    <img src="me.jpeg" alt="Lakshay Kalra">
-  <sup>
-    <li>Greetings! I'm Lakshay Kalra, a passionate and dedicated computer science enthusiast.</li>
-    <li>With a love for problem-solving and a relentless pursuit of knowledge, I strive to make a positive impact through my skills in software development.</li>
-    <li>    I am currently pursuing a Bachelor's degree in Computer Science at VIT Vellore, where I have honed my skills in various programming languages, algorithms, and software engineering principles.</li>    
-    <li>My journey in computer science started with a fascination for solving logical puzzles and it has evolved into a quest for creating innovative solutions that address real-world challenges.</li>
-    <li>I believe in the power of technology to transform lives and industries, and I am excited about the possibilities that lie ahead in my career.</li> <br>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="game.html" target="_blank">Projects</a></li>
+      <li><a href="Resume.pdf" download="Resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    Connect with me on<a href="http://www.linkedin.com/in/lakshay-kalra-4b9a24254">[LinkedIn]</a> to explore more about my professional journey, skills, and projects. I value networking and believe in the collaborative spirit of the tech community.<br>
+  <section class="welcome-section" id="home">
+    <img src="me.jpeg" alt="Profile Pic" class="profile-pic" />
+    <h1>Welcome to My Professional Portfolio</h1>
+    <p>
+      Explore my skills, projects, and achievements. Feel free to get in touch!
+    </p>
+  </section>
+  <section id="about" style="background-color: #f5f5f5; padding: 5rem 0; display: flex; flex-direction: column; align-items: center;">
+    <div style="background-color: #fff; padding: 2rem; border-radius: 10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); max-width: 80rem;">
+      <h2 style="margin-bottom: 1rem;">About Me</h2>
+      <div style="display: flex; align-items: center; margin-bottom: 2rem;">
+        <img src="PIC.jpg" alt="Profile Pic" class="profile-pic" />
+        <div style="margin-left: 2rem;">
+          <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">Hi there, I'm Lakshay Kalra, a</p>
+          <p style="font-size: 1.2rem; font-weight: bold;">passionate and dedicated computer science enthusiast.</p>
+        </div>
+      </div>
+      <p style="font-size: 1.2rem; max-width: 50rem; text-align: justify;">
+        I'm currently pursuing a Bachelor's degree in Computer Science at VIT Vellore, where I've honed my skills in various programming languages, algorithms, and software engineering principles. With a love for problem-solving and a relentless pursuit of knowledge, I strive to make a positive impact through my skills in software development.
+      </p>
+      <p style="font-size: 1.2rem; max-width: 50rem; text-align: justify;">
+        I believe in the power of technology to transform lives and industries, and I'm always looking for new opportunities and challenges to explore. Feel free to get in touch with me to learn more about my professional journey, skills, and projects. I value networking and believe in the collaborative spirit of the tech community.
+      </p>
+    </div>
+  </section>
 
-    I am excited about the future, and I am always open to new opportunities and challenges. Let's connect and explore the boundless possibilities that technology has to offer!<br>
-  </sup> 
+  <section class="skills-section" id="skills">
+    <h2>My Skills</h2>
+    <ul>
+      <li>Web Programming</li>
+      <li>Object Oriented Programming</li>
+      <li>Data Based Programming</li>
+      <li>Soft Skills</li>
+      <li>Data Structure And Algorithm</li>
+      <li>Design and Analysis of Algorithms</li>
+    </ul>
+  </section>
 
-    
+  <section class="contact-section" id="contact">
+    <h2>Contact Me</h2>
+    <table>
+      <tr>
+        <th>NAME:</th>
+        <td>Lakshay kalra</td>
+      </tr>
+      <tr>
+        <th>MOBILE NUMBER:</th>
+        <td>8824483127</td>
+      </tr>
+      <tr>
+        <th>PINCODE:</th>
+        <td>335001</td>
+      </tr>
+      <tr>
+        <th>EMAIL:</th>
+        <td>laskhaykalra28@gmail.com</td>
+      </tr>
+      <tr>
+        <th>GITHUB ID:</th>
+        <td>mrkalra07</td>
+      </tr>
+    </table>
+  </section>
+
+  <footer>
+    &copy; 2024 Lakshay. All rights reserved.
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      let x = document.getElementById('about');
+      let z = document.getElementById('abcon');
+      let s = document.getElementById('skills');
+      let sc = document.getElementById('skillcon');
+      let c = document.getElementById('contact');
+      let cc = document.getElementById('contactcon');
+
+      // Hide elements initially
+      if (z) z.style.display = "none";
+      if (sc) sc.style.display = "none";
+      if (cc) cc.style.display = "none";
+
+      // Add event listeners
+      if (x) {
+        x.addEventListener('click', function() {
+          let y = document.getElementById('content');
+          if (y) y.style.display = "none";
+          if (z) z.style.display = "block";
+          if (sc) sc.style.display = "none";
+          if (cc) cc.style.display = "none";
+        });
+      }
+      if (s) {
+        s.addEventListener('click', function() {
+          let y = document.getElementById('content');
+          if (y) y.style.display = "none";
+          if (sc) sc.style.display = "block";
+          if (z) z.style.display = "none";
+          if (cc) cc.style.display = "none";
+        });
+      }
+      if (c) {
+        c.addEventListener('click', function() {
+          let y = document.getElementById('content');
+          if (y) y.style.display = "none";
+          if (cc) cc.style.display = "block";
+          if (z) z.style.display = "none";
+          if (sc) sc.style.display = "none";
+        });
+      }
+    });
+  </script>
+
+  
 </body>
-<script>
-    letr
-    </script>
 </html>
